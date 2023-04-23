@@ -1,0 +1,11 @@
+import { NextApiRequest, NextApiResponse } from 'next';
+import { createServer } from 'http';
+import { parse } from 'url';
+import { json } from 'body-parser';
+import { createExpenseTable } from '../database';
+import { createUserTable } from '../database';
+import { createPaymentRecordTable, createAccountTable } from '../database';
+import userRouter from './users';
+import expenseRouter from './expense';
+import paymentRouter from './paymentRecord';
+import accountRouter from './account';
